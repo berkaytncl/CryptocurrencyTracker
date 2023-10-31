@@ -11,6 +11,7 @@
 		EB29BE152AF03AB300D8D568 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29BE142AF03AB300D8D568 /* ContentView.swift */; };
 		EB29BE172AF03AB400D8D568 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB29BE162AF03AB400D8D568 /* Assets.xcassets */; };
 		EB29BE1A2AF03AB400D8D568 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB29BE192AF03AB400D8D568 /* Preview Assets.xcassets */; };
+		EB73B9C02AF0FCBB00B24D1B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB73B9BF2AF0FCBB00B24D1B /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		EB29BE142AF03AB300D8D568 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EB29BE162AF03AB400D8D568 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB29BE192AF03AB400D8D568 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EB73B9BF2AF0FCBB00B24D1B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				EB29BE122AF03AB300D8D568 /* CryptocurrencyTrackerApp.swift */,
+				EB73B9BE2AF0FCA200B24D1B /* Extensions */,
 				EB29BE142AF03AB300D8D568 /* ContentView.swift */,
 				EB29BE162AF03AB400D8D568 /* Assets.xcassets */,
 				EB29BE182AF03AB400D8D568 /* Preview Content */,
@@ -65,6 +68,14 @@
 				EB29BE192AF03AB400D8D568 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EB73B9BE2AF0FCA200B24D1B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EB73B9BF2AF0FCBB00B24D1B /* Color.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			files = (
 				EB29BE152AF03AB300D8D568 /* ContentView.swift in Sources */,
 				EB29BE132AF03AB300D8D568 /* CryptocurrencyTrackerApp.swift in Sources */,
+				EB73B9C02AF0FCBB00B24D1B /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
