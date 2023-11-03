@@ -15,6 +15,7 @@
 		EB73B9CA2AF12B6700B24D1B /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB73B9C92AF12B6700B24D1B /* CircleButtonView.swift */; };
 		EB73B9CD2AF12F6600B24D1B /* CircleButtonAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB73B9CC2AF12F6600B24D1B /* CircleButtonAnimationView.swift */; };
 		EB73B9D02AF1357600B24D1B /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB73B9CF2AF1357600B24D1B /* Coin.swift */; };
+		EB8659DB2AF52EFA00F5D6F4 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8659DA2AF52EFA00F5D6F4 /* HomeViewModel.swift */; };
 		EBDEFAE02AF253F4008C5F45 /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDEFADF2AF253F4008C5F45 /* CoinRowView.swift */; };
 		EBDEFAE52AF2AE21008C5F45 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDEFAE42AF2AE21008C5F45 /* Double.swift */; };
 /* End PBXBuildFile section */
@@ -29,6 +30,7 @@
 		EB73B9C92AF12B6700B24D1B /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
 		EB73B9CC2AF12F6600B24D1B /* CircleButtonAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonAnimationView.swift; sourceTree = "<group>"; };
 		EB73B9CF2AF1357600B24D1B /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		EB8659DA2AF52EFA00F5D6F4 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		EBDEFADF2AF253F4008C5F45 /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
 		EBDEFAE42AF2AE21008C5F45 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,6 +122,7 @@
 		EB73B9C42AF129DA00B24D1B /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				EB8659DA2AF52EFA00F5D6F4 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB73B9C62AF129EF00B24D1B /* HomeView.swift in Sources */,
+				EB8659DB2AF52EFA00F5D6F4 /* HomeViewModel.swift in Sources */,
 				EB29BE132AF03AB300D8D568 /* CryptocurrencyTrackerApp.swift in Sources */,
 				EBDEFAE52AF2AE21008C5F45 /* Double.swift in Sources */,
 				EB73B9CA2AF12B6700B24D1B /* CircleButtonView.swift in Sources */,
