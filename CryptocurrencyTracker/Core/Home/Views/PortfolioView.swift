@@ -35,6 +35,11 @@ struct PortfolioView: View {
                     toolbarTrailingItem
                 }
             })
+            .onChange(of: viewModel.searchText) { oldValue, newValue in
+                if newValue.isEmpty {
+                    removeSelectedCoin()
+                }
+            }
         }
     }
 }
@@ -48,13 +53,13 @@ extension PortfolioView {
     private var coinLogoList: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack(spacing: 10) {
-                ForEach(viewModel.allCoins) { coin in
+                ForEach(viewModel.searchText.isEmpty ? viewModel.portfolioCoins : viewModel.allCoins) { coin in
                     CoinLogoView(coin: coin)
                         .frame(width: 75)
                         .padding(4)
                         .onTapGesture {
                             withAnimation(.easeIn) {
-                                selectedCoin = coin
+                                updateSelectedCoin(coin: coin)
                             }
                         }
                         .background(
@@ -114,9 +119,9 @@ extension PortfolioView {
     }
     
     private func saveButtonPressed() {
-        guard let coin = selectedCoin else { return }
+        guard let coin = selectedCoin, let amount = Double(quantityText) else { return }
         
-        //TODO: save to portfolio
+        viewModel.updatePortfolio(coin: coin, amount: amount)
         
         withAnimation(.easeIn) {
             showCheckmark = true
@@ -124,7 +129,6 @@ extension PortfolioView {
         }
         
         UIApplication.shared.endEditing()
-        quantityText = ""
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             withAnimation(.easeOut) {
@@ -136,6 +140,7 @@ extension PortfolioView {
     private func removeSelectedCoin() {
         selectedCoin = nil
         viewModel.searchText = ""
+        quantityText = ""
     }
     
     private func getCurrentValue() -> Double {
@@ -143,5 +148,16 @@ extension PortfolioView {
             return quantity * (selectedCoin?.currentPrice ?? 0)
         }
         return 0
+    }
+    
+    private func updateSelectedCoin(coin: Coin) {
+        selectedCoin = coin
+        
+        if let portfolioCoin = viewModel.portfolioCoins.first(where: { $0.id == coin.id }),
+           let amount = portfolioCoin.currentHoldings {
+            quantityText = "\(amount)"
+        } else {
+            quantityText = ""
+        }
     }
 }
