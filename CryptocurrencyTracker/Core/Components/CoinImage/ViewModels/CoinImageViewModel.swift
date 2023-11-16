@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-class CoinImageViewModel: ObservableObject {
+final class CoinImageViewModel: ObservableObject {
     
     @Published var image: UIImage? = nil
     @Published var isLoading: Bool = false
