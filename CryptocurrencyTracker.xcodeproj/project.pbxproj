@@ -30,6 +30,8 @@
 		EB84BBBF2AFFE45D00B33433 /* CoinDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB84BBBE2AFFE45D00B33433 /* CoinDetail.swift */; };
 		EB84BBC12AFFF1BE00B33433 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB84BBC02AFFF1BE00B33433 /* DetailViewModel.swift */; };
 		EB8659DB2AF52EFA00F5D6F4 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8659DA2AF52EFA00F5D6F4 /* HomeViewModel.swift */; };
+		EB9A09622B08C3A300D203E1 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9A09612B08C3A300D203E1 /* ChartView.swift */; };
+		EB9A09642B08E3CB00D203E1 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9A09632B08E3CB00D203E1 /* Date.swift */; };
 		EBA3E0182AF8E74F00AC7EFD /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA3E0172AF8E74F00AC7EFD /* SearchBarView.swift */; };
 		EBA3E01A2AF904DC00AC7EFD /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA3E0192AF904DC00AC7EFD /* UIApplication.swift */; };
 		EBB5651C2AF589AE0019C75A /* CoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB5651B2AF589AE0019C75A /* CoinDataService.swift */; };
@@ -67,6 +69,8 @@
 		EB84BBBE2AFFE45D00B33433 /* CoinDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetail.swift; sourceTree = "<group>"; };
 		EB84BBC02AFFF1BE00B33433 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		EB8659DA2AF52EFA00F5D6F4 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		EB9A09612B08C3A300D203E1 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		EB9A09632B08E3CB00D203E1 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		EBA3E0172AF8E74F00AC7EFD /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		EBA3E0192AF904DC00AC7EFD /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		EBB5651B2AF589AE0019C75A /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
@@ -103,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				EB0115012AFE3F7C0016782A /* DetailView.swift */,
+				EB9A09612B08C3A300D203E1 /* ChartView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -195,6 +200,7 @@
 				EB73B9BF2AF0FCBB00B24D1B /* Color.swift */,
 				EBDEFAE42AF2AE21008C5F45 /* Double.swift */,
 				EBA3E0192AF904DC00AC7EFD /* UIApplication.swift */,
+				EB9A09632B08E3CB00D203E1 /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -371,10 +377,12 @@
 				EB1F0D2C2AF7BCB400BFE052 /* CoinImageView.swift in Sources */,
 				EB73B9C02AF0FCBB00B24D1B /* Color.swift in Sources */,
 				EB73B9D02AF1357600B24D1B /* Coin.swift in Sources */,
+				EB9A09642B08E3CB00D203E1 /* Date.swift in Sources */,
 				EB0115022AFE3F7C0016782A /* DetailView.swift in Sources */,
 				EBA3E01A2AF904DC00AC7EFD /* UIApplication.swift in Sources */,
 				EB5301542AF92E45009E7431 /* StatisticView.swift in Sources */,
 				EBBDB5EA2AFA22F6000BE39D /* PortfolioView.swift in Sources */,
+				EB9A09622B08C3A300D203E1 /* ChartView.swift in Sources */,
 				EB4712882AF69C9800B171CF /* NetworkingManager.swift in Sources */,
 				EBE0A6B02AF9961500BF6487 /* MarketDataService.swift in Sources */,
 				EB1F0D2E2AF7C6AE00BFE052 /* CoinImageService.swift in Sources */,
