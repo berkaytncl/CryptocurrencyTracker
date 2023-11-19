@@ -22,7 +22,11 @@ struct DetailLoadingView: View {
 
 struct DetailView: View {
     
+    @Namespace var overviewID
+    @State private var scrollTarget: Namespace.ID? = nil
+    
     @StateObject private var viewModel: DetailViewModel
+    @State private var showFullDescription: Bool = false
     private let columns: [GridItem] = [
         GridItem(.flexible()),
         GridItem(.flexible())
@@ -34,28 +38,40 @@ struct DetailView: View {
     }
     
     var body: some View {
-        ScrollView {
-            VStack {
-                ChartView(coin: viewModel.coin)
-                    .padding(.vertical)
-                VStack(spacing: 20) {
-                    overviewTitle
-                    Divider()
-                    overviewGrid
-                    additionalTitle
-                    Divider()
-                    additionalGrid
+        ScrollViewReader { proxy in
+            ScrollView {
+                VStack {
+                    ChartView(coin: viewModel.coin)
+                        .padding(.vertical)
+                    VStack(spacing: 20) {
+                        overviewTitle
+                            .id(overviewID)
+                        Divider()
+                        descriptionSection
+                        overviewGrid
+                        
+                        additionalTitle
+                        Divider()
+                        additionalGrid
+                        websiteSection
+                    }
+                    .padding()
                 }
-                .padding()
+                .onChange(of: scrollTarget) { _, newValue in
+                    guard let target = newValue else { return }
+                    withAnimation {
+                        proxy.scrollTo(target, anchor: .top)
+                    }
+                }
             }
-        }
-        .navigationTitle(viewModel.coin.name)
-        .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
-                navigationBarTrailingItems
+            .navigationTitle(viewModel.coin.name)
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    navigationBarTrailingItems
+                }
             }
+        .navigationBarTitleDisplayMode(.large)
         }
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
@@ -90,6 +106,53 @@ extension DetailView {
             .bold()
             .foregroundStyle(Color.theme.accent)
             .frame(maxWidth: .infinity, alignment: .leading)
+    }
+    
+    private var descriptionSection: some View {
+        ZStack {
+            if let coinDescription = viewModel.coinDescription, !coinDescription.isEmpty {
+                VStack(alignment: .leading) {
+                    Text(coinDescription)
+                        .lineLimit(showFullDescription ? nil : 3)
+                        .font(.callout)
+                        .foregroundStyle(Color.theme.secondaryText)
+                    
+                    Button(showFullDescription ? "Show less" : "Read more..") {
+                        withAnimation(.easeInOut) {
+                            showFullDescription.toggle()
+                            
+                            if showFullDescription {
+                                scrollTarget = overviewID
+                            } else {
+                                scrollTarget = nil
+                            }
+                        }
+                    }
+                    .tint(.blue)
+                    .font(.caption)
+                    .bold()
+                    .padding(.vertical, 4)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+            }
+        }
+    }
+    
+    private var websiteSection: some View {
+        VStack(alignment: .leading, spacing: 20) {
+            if let websiteString = viewModel.websiteURL,
+               let url = URL(string: websiteString) {
+                Link("Website", destination: url)
+            }
+            
+            if let redditString = viewModel.redditURL,
+               let url = URL(string: redditString) {
+                Link("Reddit", destination: url)
+            }
+        }
+        .tint(.blue)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .font(.headline)
     }
     
     private var overviewGrid: some View {
