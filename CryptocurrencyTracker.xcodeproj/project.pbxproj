@@ -10,6 +10,8 @@
 		EB0115022AFE3F7C0016782A /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0115012AFE3F7C0016782A /* DetailView.swift */; };
 		EB0489632AFAC934000BA7B5 /* PortfolioContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB0489612AFAC934000BA7B5 /* PortfolioContainer.xcdatamodeld */; };
 		EB0489652AFAC9E1000BA7B5 /* PortfolioDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0489642AFAC9E1000BA7B5 /* PortfolioDataService.swift */; };
+		EB0D17322B0B73B900096A9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB0D17312B0B73B900096A9E /* LaunchScreen.storyboard */; };
+		EB0D17342B0B75D400096A9E /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0D17332B0B75D400096A9E /* LaunchView.swift */; };
 		EB1F0D2C2AF7BCB400BFE052 /* CoinImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1F0D2B2AF7BCB400BFE052 /* CoinImageView.swift */; };
 		EB1F0D2E2AF7C6AE00BFE052 /* CoinImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1F0D2D2AF7C6AE00BFE052 /* CoinImageService.swift */; };
 		EB1F0D322AF7DD7600BFE052 /* CoinImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1F0D312AF7DD7600BFE052 /* CoinImageViewModel.swift */; };
@@ -50,6 +52,9 @@
 		EB0115012AFE3F7C0016782A /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		EB0489622AFAC934000BA7B5 /* PortfolioContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PortfolioContainer.xcdatamodel; sourceTree = "<group>"; };
 		EB0489642AFAC9E1000BA7B5 /* PortfolioDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDataService.swift; sourceTree = "<group>"; };
+		EB0D172E2B0B735700096A9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EB0D17312B0B73B900096A9E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EB0D17332B0B75D400096A9E /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		EB1F0D2B2AF7BCB400BFE052 /* CoinImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageView.swift; sourceTree = "<group>"; };
 		EB1F0D2D2AF7C6AE00BFE052 /* CoinImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageService.swift; sourceTree = "<group>"; };
 		EB1F0D312AF7DD7600BFE052 /* CoinImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageViewModel.swift; sourceTree = "<group>"; };
@@ -124,6 +129,23 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		EB0D172F2B0B738D00096A9E /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				EB0D17302B0B73A200096A9E /* Views */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		EB0D17302B0B73A200096A9E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EB0D17312B0B73B900096A9E /* LaunchScreen.storyboard */,
+				EB0D17332B0B75D400096A9E /* LaunchView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		EB1F0D2A2AF7BC9B00BFE052 /* CoinImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +191,7 @@
 		EB29BE112AF03AB300D8D568 /* CryptocurrencyTracker */ = {
 			isa = PBXGroup;
 			children = (
+				EB0D172E2B0B735700096A9E /* Info.plist */,
 				EB29BE122AF03AB300D8D568 /* CryptocurrencyTrackerApp.swift */,
 				EB4712862AF698DF00B171CF /* Utilities */,
 				EB73B9BE2AF0FCA200B24D1B /* Extensions */,
@@ -214,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				EB73B9C72AF12B1D00B24D1B /* Components */,
+				EB0D172F2B0B738D00096A9E /* Launch */,
 				EB73B9C22AF129C300B24D1B /* Home */,
 				EB0114FE2AFE3F3E0016782A /* Detail */,
 				EBDD44432B0ABB35004CADE0 /* Info */,
@@ -368,6 +392,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB0D17322B0B73B900096A9E /* LaunchScreen.storyboard in Resources */,
 				EB29BE1A2AF03AB400D8D568 /* Preview Assets.xcassets in Resources */,
 				EB29BE172AF03AB400D8D568 /* Assets.xcassets in Resources */,
 			);
@@ -405,6 +430,7 @@
 				EB0115022AFE3F7C0016782A /* DetailView.swift in Sources */,
 				EBA3E01A2AF904DC00AC7EFD /* UIApplication.swift in Sources */,
 				EB5301542AF92E45009E7431 /* StatisticView.swift in Sources */,
+				EB0D17342B0B75D400096A9E /* LaunchView.swift in Sources */,
 				EBBDB5EA2AFA22F6000BE39D /* PortfolioView.swift in Sources */,
 				EB9A09622B08C3A300D203E1 /* ChartView.swift in Sources */,
 				EB4712882AF69C9800B171CF /* NetworkingManager.swift in Sources */,
@@ -551,11 +577,12 @@
 				DEVELOPMENT_TEAM = 8VZXPVXH33;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CryptocurrencyTracker/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Cryptocurrency Tracker";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -581,11 +608,12 @@
 				DEVELOPMENT_TEAM = 8VZXPVXH33;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CryptocurrencyTracker/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Cryptocurrency Tracker";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
