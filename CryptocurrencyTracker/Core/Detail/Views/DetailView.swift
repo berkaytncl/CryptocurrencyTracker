@@ -64,14 +64,18 @@ struct DetailView: View {
                     }
                 }
             }
-            .navigationTitle(viewModel.coin.name)
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    navigationBarTrailingItems
-                }
-            }
-        .navigationBarTitleDisplayMode(.large)
         }
+        .background(
+            Color.theme.background
+                .ignoresSafeArea()
+        )
+        .navigationTitle(viewModel.coin.name)
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                navigationBarTrailingItems
+            }
+        }
+        .navigationBarTitleDisplayMode(.large)
     }
 }
 

@@ -20,14 +20,23 @@ struct InfoView: View {
         NavigationStack {
             List {
                 developerCredits
+                    .listRowBackground(Color.theme.background.opacity(0.5))
                 swiftfulThinkingCredits
+                    .listRowBackground(Color.theme.background.opacity(0.5))
                 coinGeckoCredits
+                    .listRowBackground(Color.theme.background.opacity(0.5))
                 applicationLinks
+                    .listRowBackground(Color.theme.background.opacity(0.5))
             }
+            .background(
+                Color.theme.background
+                    .ignoresSafeArea()
+            )
+            .scrollContentBackground(.hidden)
             .font(.headline)
             .tint(.blue)
             .listStyle(GroupedListStyle())
-            .navigationTitle("Settings")
+            .navigationTitle("Info")
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     XMarkButton()
