@@ -28,13 +28,8 @@ struct LaunchView: View {
             
             ZStack {
                 if showLoadingText {
-//                    Text(loadingText)
-//                        .font(.headline)
-//                        .fontWeight(.heavy)
-//                        .foregroundStyle(Color.launch.accent)
-//                        .transition(AnyTransition.scale.animation(.easeIn))
                     HStack(spacing: 0) {
-                        ForEach(loadingText.indices) { index in
+                        ForEach(loadingText.indices, id: \.self) { index in
                             Text(loadingText[index])
                                 .font(.headline)
                                 .fontWeight(.heavy)
