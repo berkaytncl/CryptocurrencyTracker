@@ -8,7 +8,3 @@ CryptocurrencyTracker is written in Swift/SwiftUI, uses MVVM architecture, Combi
 <img src="https://github.com/berkaytncl/CryptocurrencyTracker/assets/98055405/c3004521-4c7d-4494-9ade-fe6f8ef0a1f0" width="300"/>
 <img src="https://github.com/berkaytncl/CryptocurrencyTracker/assets/98055405/e0731bb9-bac6-4dd1-8ea0-d893ebc57a9f" width="300"/>
 <img src="https://github.com/berkaytncl/CryptocurrencyTracker/assets/98055405/519bc4e6-5908-4544-8abb-658b56ce02ef" width="300"/>
-
-Developed following the Swiftful Thinking Crypto App Tutorial on YouTube:
-
-https://youtube.com/playlist?list=PLwvDm4Vfkdphbc3bgy_LpLRQ9DDfFGcFu&si=EnSIkaIECMiOmarE
